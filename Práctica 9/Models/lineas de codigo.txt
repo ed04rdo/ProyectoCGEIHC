@@ -1,0 +1,21 @@
+Model ourModel3((char *)"Models/silla2/ModernCafeTable.obj");
+Model ourModel6((char *)"Models/casa_perro/doghouse.obj");
+
+
+glm::mat4 model3(1);
+//se trasdala conforme x y z
+model3 = glm::translate(model3, glm::vec3(5.0f, 0.0f, 0.0f)); // Translate it down a bit so it's at the center of the scene
+//Lo escalamos de la misma forma que la traslación pero mas pequeño
+//model3 = glm::scale(model3, glm::vec3(1.0f, 1.0f, 1.0f));	// It's a bit too big for our scene, so scale it down
+glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model3));
+ourModel3.Draw(shader);
+
+
+
+glm::mat4 model6(1);
+//se trasdala conforme x y z
+model6 = glm::translate(model6, glm::vec3(-5.0f, 5.0f, 0.0f)); // Translate it down a bit so it's at the center of the scene
+//LO escalamos de la misma forma que la traslación pero mas pequeño
+model6 = glm::scale(model6, glm::vec3(1.0f, 1.0f, 1.0f));	// It's a bit too big for our scene, so scale it down
+glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model6));
+ourModel6.Draw(shader);
