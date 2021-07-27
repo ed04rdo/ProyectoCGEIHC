@@ -198,6 +198,7 @@ int main()
 	Model LLanta((char*)"Models/Carro/Wheel.obj");
 
 	Model casa((char *)"Models/casa/casaedd.obj");
+	Model casa_c((char *)"Models/casa/casaedd_cristales.obj");
 
 	
 	// Build and compile our shader program
@@ -579,15 +580,23 @@ int main()
 
 		glBindVertexArray(0);
 
-		//Carga de modelo de lacasa
-		//Villa F
+		//Carga de modelo de la casa
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(10, 0, 10));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38, 0, 0));
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
-		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		casa.Draw(lightingShader);
+
+		//carga de modelos cristales
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38, 0, 0));
+		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		casa_c.Draw(lightingShader);
 
 		// Also draw the lamp object, again binding the appropriate shader
 		lampShader.Use();
