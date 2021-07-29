@@ -602,7 +602,7 @@ int main()
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		casa_c.Draw(lightingShader);
+		//casa_c.Draw(lightingShader);
 
 		//carga de la casita del perro
 		view = camera.GetViewMatrix();
@@ -681,9 +681,9 @@ int main()
 		//carga de esquinero
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-36, 0, 0.1));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-31, 0, -2));
 		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0));
-		//model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		esquinero.Draw(lightingShader);
 
@@ -691,7 +691,7 @@ int main()
 		//carga de palmera 1
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-50, 0, 20));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-50, 0, -20));
 		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -701,7 +701,7 @@ int main()
 		//carga de palmera 2
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-40, 0, 20));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-50, 0, 25));
 		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -710,7 +710,7 @@ int main()
 		//carga de palmera 3
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-50, 0, 30));
+		model = glm::translate(model, PosIniAuto + glm::vec3(2, 0, -20));
 		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -719,7 +719,7 @@ int main()
 		//carga de palmera 4
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-40, 0, 30));
+		model = glm::translate(model, PosIniAuto + glm::vec3(2, 0, 25));
 		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -729,27 +729,27 @@ int main()
 		//carga de arbusto 1 
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-33.5, 0, 20));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-33.5, 0, 25));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0));
-		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::scale(model, glm::vec3(1.4f, 1.4f, 1.4f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbusto.Draw(lightingShader);
 
 		//carga de arbusto 2
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-28.5, 0, 20));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-28.5, 0, 25));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0));
-		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::scale(model, glm::vec3(1.4f, 1.4f, 1.4f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbusto.Draw(lightingShader);
 
 		//carga de arbusto 3 
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-23.5, 0, 20));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-23.5, 0, 25));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0));
-		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		model = glm::scale(model, glm::vec3(1.4f, 1.4f, 1.4f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbusto.Draw(lightingShader);
 		
