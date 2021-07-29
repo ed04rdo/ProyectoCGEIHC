@@ -203,7 +203,9 @@ int main()
 	Model sunbed((char *)"Models/sunbed/camastro.obj");
 	Model sofa((char *)"Models/sofa2/sofa.obj");
 	Model mesita((char *)"Models/silla2/ModernCafeTable.obj");
-
+	Model palmera((char *)"Models/palmera/Palm_Tree.obj");
+	Model arbusto((char *)"Models/arbusto/Poplar_Tree.obj");
+	Model esquinero((char *)"Models/esquinero/esquinero.obj");
 	
 	// Build and compile our shader program
 
@@ -674,6 +676,83 @@ int main()
 		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		mesita.Draw(lightingShader);
+
+
+		//carga de esquinero
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-36, 0, 0.1));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		//model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		esquinero.Draw(lightingShader);
+
+
+		//carga de palmera 1
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-50, 0, 20));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		palmera.Draw(lightingShader);
+
+
+		//carga de palmera 2
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-40, 0, 20));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		palmera.Draw(lightingShader);
+
+		//carga de palmera 3
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-50, 0, 30));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		palmera.Draw(lightingShader);
+
+		//carga de palmera 4
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-40, 0, 30));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		palmera.Draw(lightingShader);
+
+
+		//carga de arbusto 1 
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-33.5, 0, 20));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arbusto.Draw(lightingShader);
+
+		//carga de arbusto 2
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-28.5, 0, 20));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arbusto.Draw(lightingShader);
+
+		//carga de arbusto 3 
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-23.5, 0, 20));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arbusto.Draw(lightingShader);
+		
 
 		// Also draw the lamp object, again binding the appropriate shader
 		lampShader.Use();

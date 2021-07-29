@@ -1,9 +1,9 @@
 ﻿  Main_prac11.cpp
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(413): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(826): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(827): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(831): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(832): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(834): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(835): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(415): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(905): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(906): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(910): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(911): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(913): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(914): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   Proyecto Final.vcxproj -> C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\Proyecto Final.exe
