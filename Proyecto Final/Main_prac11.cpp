@@ -49,6 +49,8 @@ float rot = 0.0f;
 glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
 glm::vec3 PosIni(-75.0f, 1.0f, -45.0f);
 glm::vec3 PosIniAuto(-75.0f, 1.0f, -45.0f);
+glm::vec3 PosIni1(-75.0f, 1.0f, -45.0f);
+glm::vec3 PosIniAuto1(-75.0f, 1.0f, -45.0f);
 bool active;
 
 
@@ -95,6 +97,14 @@ glm::vec3 LightP1;
 float movKitX = 0.0;
 float movKitZ = 0.0;
 float rotKit = 0.0;//orientación de la animación inicial
+float movKitX1 = 0.0;
+float movKitZ1 = 0.0;
+float rotKit1 = 0.0;//orientación de la animación inicial
+
+float mov_garage = 0.0;
+float mov_puerta = 0.0;
+float mov_sala = 0.0;
+float mov_cocina = 0.0;
 
 bool circuito = false;
 bool recorrido1 = true;
@@ -149,7 +159,7 @@ int main()
 	glfwInit();
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Casa", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final", nullptr, nullptr);
 
 	if (nullptr == window)
 	{
@@ -206,6 +216,11 @@ int main()
 	Model palmera((char *)"Models/palmera/Palm_Tree.obj");
 	Model arbusto((char *)"Models/arbusto/Poplar_Tree.obj");
 	Model esquinero((char *)"Models/esquinero/esquinero.obj");
+
+	Model puerta_casa((char *)"Models/casa/puerta_casa.obj");
+	Model puerta_garage((char *)"Models/casa/puerta_garage.obj");
+	Model ventana_sala((char *)"Models/casa/ventanal_sala.obj");
+	Model ventana_cocina((char *)"Models/casa/ventana_cocina.obj");
 	
 	// Build and compile our shader program
 
@@ -535,7 +550,7 @@ int main()
 		//Carroceria
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(movKitX, 0, movKitZ));
+		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -544,7 +559,7 @@ int main()
 		//Llanta Delantera Der
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(movKitX, 0, movKitZ));
+		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::translate(model, glm::vec3(1.7f, 0.5f, 2.6f));;
 		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
@@ -554,7 +569,7 @@ int main()
 		//Llanta Trasera Der
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(movKitX, 0, movKitZ));
+		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::translate(model, glm::vec3(1.7f, 0.5f, -2.9f));
 		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
@@ -565,7 +580,7 @@ int main()
 		//Llanta Delantera Izq
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(movKitX, 0, movKitZ));
+		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::translate(model, glm::vec3(-1.7f, 0.8f, 2.6f));
 		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0));
@@ -576,7 +591,7 @@ int main()
 		//Llanta Trasera Izq
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(movKitX, 0, movKitZ));
+		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::translate(model, glm::vec3(-1.7f, 0.8f, -2.9f));
 		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0));
@@ -602,7 +617,43 @@ int main()
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//casa_c.Draw(lightingShader);
+		casa_c.Draw(lightingShader);
+
+		//carga de ventana cocina
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38, 0, 0 + mov_cocina));
+		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		ventana_cocina.Draw(lightingShader);
+
+		//carga de ventana sala
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38, 0, 0 + mov_sala));
+		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		ventana_sala.Draw(lightingShader);
+
+		//carga de puerta garage
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38, 0, 0));
+		model = glm::rotate(model, glm::radians(mov_garage), glm::vec3(0.0f, 0.0f, 1.0));
+		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		puerta_garage.Draw(lightingShader);
+
+		//carga de puerta casa
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38, 0, 0));
+		model = glm::rotate(model, glm::radians(mov_puerta), glm::vec3(0.0f, 0.0f, 1.0));
+		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		puerta_casa.Draw(lightingShader);
 
 		//carga de la casita del perro
 		view = camera.GetViewMatrix();
@@ -922,46 +973,55 @@ void DoMovement()
 
 	if (keys[GLFW_KEY_1])
 	{
-
-		rot += 1;
-
+		if (mov_garage >= 0) {
+			mov_garage -= 0.1f;
+		}
 	}
-
 	if (keys[GLFW_KEY_2])
 	{
-		if (rotRodIzq<80.0f)
-			rotRodIzq += 1.0f;
-			
+		if (mov_garage <= 20) {
+			mov_garage += 0.5f;
+		}
 	}
 
 	if (keys[GLFW_KEY_3])
 	{
-		if (rotRodIzq>-45)
-			rotRodIzq -= 1.0f;
-		
+		if (mov_puerta >= 0) {
+			mov_puerta -= 0.1f;
+		}
 	}
-
+	if (keys[GLFW_KEY_4])
+	{
+		if (mov_puerta <= 90) {
+			mov_puerta += 0.1f;
+		}
+	}
 	
 
-	//Mov Personaje
-	if (keys[GLFW_KEY_H])
+	if (keys[GLFW_KEY_5])
+		{
+		if (mov_cocina >= 0) {
+			mov_cocina -= 0.1f;
+		}
+		}
+	if (keys[GLFW_KEY_6])
 	{
-		posZ += 1;
+		if (mov_cocina <= 1.5) {
+			mov_cocina += 0.1f;
+		}
 	}
 
-	if (keys[GLFW_KEY_Y])
+	if (keys[GLFW_KEY_7])
 	{
-		posZ -= 1;
+		if (mov_sala >= 0) {
+			mov_sala -= 0.1f;
+		}
 	}
-
-	if (keys[GLFW_KEY_G])
+	if (keys[GLFW_KEY_8])
 	{
-		posX -= 1;
-	}
-
-	if (keys[GLFW_KEY_J])
-	{
-		posX += 1;
+		if (mov_sala <= 2) {
+			mov_sala += 0.1f;
+		}
 	}
 
 
