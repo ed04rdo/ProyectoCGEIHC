@@ -102,6 +102,7 @@ float movKitZ1 = 0.0;
 float rotKit1 = 0.0;//orientación de la animación inicial
 
 float mov_garage = 0.0;
+float mov_garageY = 0.0;
 float mov_puerta = 0.0;
 float mov_sala = 0.0;
 float mov_sala1 = 0.0;
@@ -542,18 +543,18 @@ int main()
 		glm::mat4 tmp = glm::mat4(1.0f); //Temp
 
 		//Carga de modelos
-		
+
 		view = camera.GetViewMatrix();
 		glm::mat4 model(1);
 		tmp = model = glm::translate(model, glm::vec3(0, 1, 0));
 
-	
+
 		//Carga de modelo del auto
 		//Carroceria
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
-		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::rotate(model, glm::radians(rotKit1), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Carroseria.Draw(lightingShader);
@@ -562,7 +563,7 @@ int main()
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
-		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::rotate(model, glm::radians(rotKit1), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::translate(model, glm::vec3(1.7f, 0.5f, 2.6f));;
 		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -572,7 +573,7 @@ int main()
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
-		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::rotate(model, glm::radians(rotKit1), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::translate(model, glm::vec3(1.7f, 0.5f, -2.9f));
 		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -583,7 +584,7 @@ int main()
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
-		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::rotate(model, glm::radians(rotKit1), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::translate(model, glm::vec3(-1.7f, 0.8f, 2.6f));
 		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0));
 		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
@@ -594,7 +595,7 @@ int main()
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
 		model = glm::translate(model, PosIniAuto1 + glm::vec3(movKitX1, 0, movKitZ1));
-		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::rotate(model, glm::radians(rotKit1), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::translate(model, glm::vec3(-1.7f, 0.8f, -2.9f));
 		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0));
 		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
@@ -633,7 +634,7 @@ int main()
 		//carga de ventana sala 1
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-38 , 0, 0 + mov_sala));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38, 0, 0 + mov_sala));
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -642,7 +643,7 @@ int main()
 		//carga de ventana sala
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-38 + mov_sala1 , 0 , 0));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38 + mov_sala1, 0, 0));
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -651,8 +652,8 @@ int main()
 		//carga de puerta garage
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-38, 0, 0));
-		model = glm::rotate(model, glm::radians(mov_garage), glm::vec3(0.0f, 0.0f, 1.0));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38, mov_garageY , 0));
+		model = glm::rotate(model, glm::radians(mov_garage), glm::vec3(0.1f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		puerta_garage.Draw(lightingShader);
@@ -896,7 +897,57 @@ void animacion()
 			}
 
 		}
-	}
+
+		////Movimiento del coche
+		if (circuito)
+		{
+			if (recorrido1)
+			{
+				rotKit1 = 0;
+				movKitZ1 += 0.3f;
+				if (movKitZ1 > 20)
+				{
+					recorrido1 = false;
+					recorrido2 = true;
+
+				}
+			}
+			if (recorrido2)
+			{
+				rotKit1 = 270;
+				movKitX1 -= 0.3f;
+				if (movKitX1 < -15)
+				{
+					recorrido2 = false;
+					recorrido3 = true;
+				}
+			}
+			if (recorrido3)
+			{
+				rotKit1 = 180;
+				movKitZ1 -= 0.3f;
+				mov_garage -= 1.2f;
+				mov_garageY += 0.09f;
+				if (movKitZ1 < -6)
+				{
+					recorrido3 = false;
+					recorrido4 = true;
+				}
+			}
+			if (recorrido4)
+			{
+				rotKit1 = 0;
+				movKitZ1 += 0.3f;
+				mov_garage += 1.2f;
+				mov_garageY -= 0.09f;
+				if (movKitZ1 > 20)
+				{
+					recorrido4 = false;
+					recorrido3 = true;
+				}
+			}
+		}
+}
 
 
 // Is called whenever a key is pressed/released via GLFW
@@ -931,6 +982,26 @@ void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mode
 
 	}
 
+	if (keys[GLFW_KEY_I])
+	{
+		pointLightPositions[3].x += 0.1f;
+		pointLightPositions[3].y += 0.1f;
+		pointLightPositions[3].z += 0.1f;
+		mov_garage = 0.0f;
+		mov_garageY = 0.0f;
+		circuito = true;
+	}
+
+	if (keys[GLFW_KEY_O])
+	{
+		mov_garage = 0.0f;
+		mov_garageY = 0.0f;
+		circuito = false;
+		recorrido1 = true;
+		recorrido2 = false;
+		recorrido3 = false;
+		recorrido4 = false;
+	}
 
 	if (GLFW_KEY_ESCAPE == key && GLFW_PRESS == action)
 	{
@@ -984,14 +1055,16 @@ void DoMovement()
 
 	if (keys[GLFW_KEY_1])
 	{
-		if (mov_garage >= 0) {
-			mov_garage -= 0.1f;
+		if (mov_garage <= 0) {
+			mov_garage += 0.3f;
+			mov_garageY -= 0.02f;
 		}
 	}
 	if (keys[GLFW_KEY_2])
 	{
-		if (mov_garage <= 20) {
-			mov_garage += 0.5f;
+		if (mov_garage >= -90) {
+			mov_garage -= 0.3f;
+			mov_garageY += 0.02f;
 		}
 	}
 

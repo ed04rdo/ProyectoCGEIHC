@@ -1,14 +1,14 @@
 ﻿  Main_prac11.cpp
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(432): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(967): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(968): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(972): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(973): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(975): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(976): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Proyecto Final\Main_prac11.cpp(433,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Proyecto Final\Main_prac11.cpp(1038,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Proyecto Final\Main_prac11.cpp(1039,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Proyecto Final\Main_prac11.cpp(1043,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Proyecto Final\Main_prac11.cpp(1044,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Proyecto Final\Main_prac11.cpp(1046,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Proyecto Final\Main_prac11.cpp(1047,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
 LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
-soil2-debug.lib(etc1_utils.obj) : warning LNK4099: no se encontr¾ PDB 'soil2-debug.pdb' con 'soil2-debug.lib(etc1_utils.obj)' o en 'C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vincularß el objeto sin tener en cuenta informaci¾n de depuraci¾n
-soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontr¾ PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_DXT.obj)' o en 'C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vincularß el objeto sin tener en cuenta informaci¾n de depuraci¾n
-soil2-debug.lib(image_helper.obj) : warning LNK4099: no se encontr¾ PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_helper.obj)' o en 'C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vincularß el objeto sin tener en cuenta informaci¾n de depuraci¾n
-soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontr¾ PDB 'soil2-debug.pdb' con 'soil2-debug.lib(SOIL2.obj)' o en 'C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vincularß el objeto sin tener en cuenta informaci¾n de depuraci¾n
-  Proyecto Final.vcxproj -> C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\Proyecto Final.exe
+soil2-debug.lib(etc1_utils.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(etc1_utils.obj)' o en 'C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_DXT.obj)' o en 'C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(image_helper.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_helper.obj)' o en 'C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(SOIL2.obj)' o en 'C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+  Proyecto Final.vcxproj -> C:\Users\Eduardo\Documents\2021-2\Lab. CGEIHC\ProyectoCGEIHC\Debug\Proyecto Final.exe
