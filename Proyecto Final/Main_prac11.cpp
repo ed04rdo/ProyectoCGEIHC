@@ -36,7 +36,7 @@ const GLuint WIDTH = 1280, HEIGHT = 720;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 // Camera
-Camera  camera(glm::vec3(-63.0f, 3.0f, -15.0f));
+Camera  camera(glm::vec3(-93.0f, 3.0f, -15.0f));
 GLfloat lastX = WIDTH / 2.0;
 GLfloat lastY = HEIGHT / 2.0;
 bool keys[1024];
@@ -104,6 +104,7 @@ float rotKit1 = 0.0;//orientación de la animación inicial
 float mov_garage = 0.0;
 float mov_puerta = 0.0;
 float mov_sala = 0.0;
+float mov_sala1 = 0.0;
 float mov_cocina = 0.0;
 
 bool circuito = false;
@@ -220,6 +221,7 @@ int main()
 	Model puerta_casa((char *)"Models/casa/puerta_casa.obj");
 	Model puerta_garage((char *)"Models/casa/puerta_garage.obj");
 	Model ventana_sala((char *)"Models/casa/ventanal_sala.obj");
+	Model ventana_sala1((char *)"Models/casa/ventana_sala1.obj");
 	Model ventana_cocina((char *)"Models/casa/ventana_cocina.obj");
 	
 	// Build and compile our shader program
@@ -628,14 +630,23 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		ventana_cocina.Draw(lightingShader);
 
-		//carga de ventana sala
+		//carga de ventana sala 1
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
-		model = glm::translate(model, PosIniAuto + glm::vec3(-38, 0, 0 + mov_sala));
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38 , 0, 0 + mov_sala));
 		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
 		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		ventana_sala.Draw(lightingShader);
+
+		//carga de ventana sala
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, PosIniAuto + glm::vec3(-38 + mov_sala1 , 0 , 0));
+		model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		ventana_sala1.Draw(lightingShader);
 
 		//carga de puerta garage
 		view = camera.GetViewMatrix();
@@ -1024,6 +1035,18 @@ void DoMovement()
 		}
 	}
 
+	if (keys[GLFW_KEY_9])
+	{
+		if (mov_sala1 >= 0) {
+			mov_sala1 -= 0.1f;
+		}
+	}
+	if (keys[GLFW_KEY_0])
+	{
+		if (mov_sala1 <= 1) {
+			mov_sala1 += 0.1f;
+		}
+	}
 
 
 

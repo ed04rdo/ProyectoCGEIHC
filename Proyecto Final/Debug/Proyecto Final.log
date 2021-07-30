@@ -1,9 +1,14 @@
 ﻿  Main_prac11.cpp
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(430): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(956): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(957): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(961): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(962): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(964): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(965): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(432): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(967): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(968): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(972): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(973): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(975): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\eduardo\documents\github\proyectocgeihc\proyecto final\main_prac11.cpp(976): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+soil2-debug.lib(etc1_utils.obj) : warning LNK4099: no se encontr¾ PDB 'soil2-debug.pdb' con 'soil2-debug.lib(etc1_utils.obj)' o en 'C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vincularß el objeto sin tener en cuenta informaci¾n de depuraci¾n
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontr¾ PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_DXT.obj)' o en 'C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vincularß el objeto sin tener en cuenta informaci¾n de depuraci¾n
+soil2-debug.lib(image_helper.obj) : warning LNK4099: no se encontr¾ PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_helper.obj)' o en 'C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vincularß el objeto sin tener en cuenta informaci¾n de depuraci¾n
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontr¾ PDB 'soil2-debug.pdb' con 'soil2-debug.lib(SOIL2.obj)' o en 'C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\soil2-debug.pdb'; se vincularß el objeto sin tener en cuenta informaci¾n de depuraci¾n
   Proyecto Final.vcxproj -> C:\Users\Eduardo\Documents\GitHub\ProyectoCGEIHC\Debug\Proyecto Final.exe
